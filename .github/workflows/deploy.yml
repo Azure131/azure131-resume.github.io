@@ -14,15 +14,18 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: "npm" # 或 'pnpm'
+          cache: "pnpm" # 修改为pnpm
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: latest
 
       - name: Install dependencies
-        run: npm install
-        # 或 pnpm install
+        run: pnpm install # 修改为pnpm install
 
       - name: Build
-        run: npm run build
-        # 或 pnpm build
+        run: pnpm build # 修改为pnpm build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
