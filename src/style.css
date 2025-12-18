@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-gray-900;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-indigo-600 to-pink-500 hover:opacity-90 transition-opacity shadow-lg shadow-indigo-600/25 text-white font-medium py-3 px-6 rounded-lg;
+  }
+
+  .btn-secondary {
+    @apply border border-indigo-600/20 hover:bg-indigo-600/5 text-indigo-600 font-medium py-3 px-6 rounded-lg transition-colors;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-indigo-600 via-pink-500 to-indigo-600 bg-clip-text text-transparent;
+  }
+
+  .glass-effect {
+    @apply bg-white/80 backdrop-blur-sm border border-white/20;
+  }
+
+  .terminal-effect {
+    @apply font-mono text-sm bg-gray-100/50 rounded-lg border border-gray-200 backdrop-blur-sm px-4 py-2;
+  }
+}
